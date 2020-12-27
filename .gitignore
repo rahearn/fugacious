@@ -34,7 +34,6 @@ tags
 # folders
 /config/deploy.rb
 /config/deploy
-/config/environments/production.rb
 /config/initializers/searchify.rb
 /coverage
 /db/*.sqlite3
