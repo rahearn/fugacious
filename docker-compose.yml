@@ -1,20 +1,31 @@
-version: '2.1'
+version: '3.6'
 services:
   web:
     build: .
     depends_on:
-      redis:
-        condition: service_started
+      - redis
+      - db
     command: foreman start --port 3000
     volumes:
       - .:/fugacious
+      - dbrun:/var/run/postgresql
     ports:
-      - "3000:3000"
-    links:
-      - redis:redis
+      - "8080:3000"
     environment:
       REDIS_URL: redis://redis
+      DATABASE_URL: postgres://root@db:5432/fugacious
+      APP_NAME: Fugaciousish
+      MAX_RETENTION_HOURS: 24
+      RAILS_SERVE_STATIC_FILES: "true"
+    restart: unless-stopped
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - dbrun:/var/run/postgresql
   redis:
     image: redis
-    ports:
-      - "6379:6379"
+volumes:
+  dbrun: {}

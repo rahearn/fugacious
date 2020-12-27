@@ -41,6 +41,7 @@ tags
 /kitchen/nodes/*.json
 /log/*
 /public/system
+/public/assets
 /spec/tmp
 /tmp
 /vendor/bundle
