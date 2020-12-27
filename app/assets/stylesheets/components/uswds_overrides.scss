@@ -15,12 +15,6 @@ $site-max-width: 650px;
   max-width: $site-max-width;
 }
 
-.usa-banner-header {
-  .usa-grid {
-    max-width: $site-max-width;
-  }
-}
-
 .usa-header-extended {
   .usa-navbar {
     margin-left: auto;
@@ -72,6 +66,7 @@ $site-max-width: 650px;
 .usa-header {
   background: $color-primary-darkest;
   border-bottom-color: transparent;
+  padding-top: 1rem;
 
   .usa-logo {
     float: none;
@@ -83,7 +78,6 @@ $site-max-width: 650px;
       float: none;
       margin-bottom: 3rem;
       margin-left: 3rem;
-      margin-top: 3rem;
     }
   }
   @media screen and (min-width: $nav-width) {
