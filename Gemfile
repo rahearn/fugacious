@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
-ruby '~> 2.5.7'
+ruby '~> 2.7.2'
 
 gem 'autoprefixer-rails'
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails', '~> 4.2'
 gem 'dotenv-rails'
 gem 'i18n-globals'
 gem 'jbuilder', '~> 2.0'
 gem 'puma'
-gem 'rails', '~> 4.2.11'
+gem 'rails', '~> 5.0'
 gem 'sass-rails'
 gem 'secure_headers'
 gem 'sidekiq'
@@ -24,11 +24,11 @@ gem 'uswds-rails', github: '18F/uswds-rails-gem'
 group :development, :test do
   gem 'brakeman', require: false
   gem 'coveralls', require: false
-  gem 'factory_bot_rails', "~> 4.10.0"
+  gem 'factory_bot_rails', "~> 4.10"
   gem 'inch', require: false
   gem 'pry-nav'
-  gem 'rspec-rails', '~> 3.8.2'
-  gem 'sqlite3', '~> 1.3.13'
+  gem 'rspec-rails', '~> 3.8'
+  gem 'sqlite3', '~> 1.3'
 end
 
 group :development do
@@ -36,7 +36,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'quiet_assets'
   gem 'rb-fsevent'
   gem 'unf'
 end
@@ -46,12 +45,12 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '~> 0.15'
+  gem 'pg', '~> 1.0'
   gem 'rails_12factor'
 end
 
 group :test do
-  gem 'capybara', '~> 3.14.0'
+  gem 'capybara', '~> 3.14'
   gem 'capybara-screenshot'
   gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
@@ -63,4 +62,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'timecop'
   gem 'webmock'
+  gem 'rails-controller-testing'
 end
