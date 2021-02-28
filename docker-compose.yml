@@ -25,7 +25,11 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - dbrun:/var/run/postgresql
+      - dbdata:/var/lib/postgresql/data
+    restart: unless-stopped
   redis:
     image: redis
+    restart: unless-stopped
 volumes:
   dbrun: {}
+  dbdata: {}
