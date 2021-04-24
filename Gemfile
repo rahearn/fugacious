@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
-ruby '~> 2.7.2'
+ruby '2.7.3'
 
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.2'
